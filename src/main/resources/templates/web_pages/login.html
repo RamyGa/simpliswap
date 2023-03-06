@@ -47,53 +47,6 @@
 
 
 <script>
-    // function decodeJwtResponse(token) {
-    //     let base64Url = token.split('.')[1]
-    //     let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    //     let jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-    //         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    //     }).join(''));
-    //     return JSON.parse(jsonPayload)
-    // }
-    //
-    // let responsePayload;
-    // window.handleCredentialResponse = (response) => {
-    //     // decodeJwtResponse() is a custom function defined by you
-    //     // to decode the credential response.
-    //     responsePayload = decodeJwtResponse(response.credential);
-    //
-    //     console.log("ID: " + responsePayload.sub);
-    //     console.log('Full Name: ' + responsePayload.name);
-    //     console.log('Given Name: ' + responsePayload.given_name);
-    //     console.log('Family Name: ' + responsePayload.family_name);
-    //     console.log("Image URL: " + responsePayload.picture);
-    //     console.log("Email: " + responsePayload.email);
-    // }
-
-    // function init() {
-    //     gapi.load('auth2', function() {
-    //         gapi.auth2.init({
-    //             client_id: '736428050024-0ud1o97pg1or3j40ln949j6mgnmreck6.apps.googleusercontent.com'
-    //         });
-    //     });
-    // }
-
-
-    // function init() {
-    //     gapi.load('auth2', function() {
-    //         gapi.auth2.client.init({
-    //             apiKey: 'AIzaSyBbqUJJN1l-1-0eKFUQWUYS_6AJ2gYeZNo',
-    //             clientId: '736428050024-0ud1o97pg1or3j40ln949j6mgnmreck6.apps.googleusercontent.com',
-    //             scope: 'openid email profile'
-    //         }).then(function() {
-    //             console.log('gapi initialized successfully');
-    //         }, function(error) {
-    //             // console.error('gapi initialization failed: ' + error);
-    //             console.error('gapi initialization failed: ' + JSON.stringify(error, null, 2));
-    //
-    //         });
-    //     });
-    // }
 
 
 
@@ -151,45 +104,8 @@
     }
 
 
-    // function signIn() {
-    //     console.log("In sign in method html");
-    //     console.log('gapi.auth2.getAuthInstance() exists: ', gapi.auth2.getAuthInstance());
-    //     if (gapi.auth2.getAuthInstance()) {
-    //         console.log("Signed in successfully.");
-    //         gapi.auth2.getAuthInstance().signIn().then(function(response) {
-    //             // Handle successful sign-in
-    //
-    //
-    //         }, function(error) {
-    //             // Handle error
-    //             console.error("Error signing in: ", error);
-    //         });
-    //     }
 
 
-
-
-        // gapi.auth2.getAuthInstance().signIn().then(function(response) {
-        //
-        //     var id_token = response.getAuthResponse().id_token;
-        //     // Send id_token to server for verification
-        //
-        //     $.ajax({
-        //         type: "POST",
-        //         url: "/verify-id-token",
-        //         data: { id_token: id_token },
-        //         success: function(data) {
-        //             // Handle success response from server
-        //             handleCredentialResponse(data);
-        //             console.log("Id token verified successfully.");
-        //         },
-        //         error: function(jqXHR, textStatus, errorThrown) {
-        //             // Handle error response from server
-        //             console.log("Failed to verify id token. Error: " + errorThrown);
-        //         }
-        //     });
-        // });
-    //}
 
 </script>
 </body>
