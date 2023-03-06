@@ -1,0 +1,35 @@
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: deleted for github push to repo
+            clientSecret: deleted for github push to repo
+            scope:
+              - email
+              - profile
+              - openid
+            redirect-uri: 'http://localhost:9090/login/oauth2/code/google'
+
+            authorization-grant-type: authorization_code
+
+
+            client-name: Google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+            user-name-attribute: sub
+
+server:
+  port: 9090
+
+logging:
+  level:
+    org.springframework: DEBUG
+
+
+
